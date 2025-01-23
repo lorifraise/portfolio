@@ -1,1 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lori Portfolio</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            color: #000000;
+            overflow: hidden;
+        }
 
+        /* Header Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            padding: 15px 20px;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            background: #d50000;
+        }
+
+        /* Main Container */
+        #container {
+            text-align: center;
+            padding: 120px 20px 50px; /* Adjust padding to account for fixed header */
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #333;
+        }
+
+        /* Strawberry Styles */
+        .strawberry {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            pointer-events: none;
+            animation: fall linear infinite;
+        }
+
+        @keyframes fall {
+            0% {
+                transform: translateY(-800px) rotate(0deg);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh) rotate(360deg);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="/example1">Portfolio</a>
+            <a href="/example2">Animations</a>
+            <a href="/example3">Gallery</a>
+            <a href="/example4">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div id="container">
+        <h1>Lori Martin Lim</h1>
+        <p>
+            Lolsies lori My name isl ori and i like cats lol
+        </p>
+    </div>
+
+    <!-- Falling Strawberries -->
+    <script>
+        const strawberryImages = [
+            'https://media-hosting.imagekit.io//5147ae8a67b4490c/IMG_2009%20(1).png?Expires=1832203250&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=MsUhzwY0MST4VuwcjZr33AiRVvyeED-hdjkX4gLYPmhgL1Fuv2U6cYT54ghxWjOaz4ackA3NK65qfvBa0wKxAKmI71HRJJU4aVZF3gRqLybl20Kcg3-rDIboENjU6-3vHNlPRgE7dRAhNK~gQSXnm12WJkQ9bHUk~F1YgxqJzwAI2ExDx4r0NB1GKVH3FatF821PBLstYBPOOle5OXK-STW2fLCZFCdL-qRObtzHWnMeScWWC1l6QAzSKLzhoy-mUdbMEAxs--tmds~Lm-PnjfJWsuQ~444mWD~A7Qz-BV5tVQoxUAOUqkmOk92wVkntYUvi1MhpzkAuGOwnfRiqrw__',
+            'https://media-hosting.imagekit.io//b670b7e3620e4521/IMG_2008%20(1).png?Expires=1832203250&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=f-7M78ZHsJe70wr~q~knrg7T6aBV44V11dTD6jRJsCIsu1Rz4YaMQlUpPyWiAS89VGHcAOz5Nq-FtOIno-FjZHpghcP50Ti4rX~l1ncC-KCoQIjFs4IjOVNZ8uDBGVsh5O634shSNOxExhpNkCzRYGJctwZmr1I2OLFQ2UzLeVHE-Uk~jUcyg1uYn6TTn-Ohsl2b2~A6R3nzTY6yaowQaoGSZtg~MIrhkV3~LczSNzGYQM1EGCpmWnYYWKLSBPY~J7TBEUPxHUBqd68HANRox3LMXGdkz2dtf4kD95-KX1lSihfz8J44cE73fjEygOB7b56CKCUp5mtfP3ZRwIGIYw__'
+        ];
+
+        // Function to create a random strawberry element
+        function createStrawberry() {
+            const strawberry = document.createElement('img');
+            strawberry.src = strawberryImages[Math.floor(Math.random() * strawberryImages.length)];
+            strawberry.classList.add('strawberry');
+            strawberry.style.left = Math.random() * 100 + 'vw'; // Random horizontal position
+            strawberry.style.animationDuration = Math.random() * 5 + 3 + 's'; // Slower fall duration
+            strawberry.style.opacity = Math.random() * 0.8 + 0.2; // Random opacity
+            document.body.appendChild(strawberry);
+
+            // Remove the strawberry after it falls
+            strawberry.addEventListener('animationend', () => {
+                strawberry.remove();
+            });
+        }
+
+        // Create falling strawberries every 500ms
+        setInterval(createStrawberry, 500);
+    </script>
+</body>
+</html>
