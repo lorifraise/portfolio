@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | Lori Martin-Lim</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            color: #000000;
+            overflow: hidden;
+        }
+
+        /* Header Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            padding: 15px 20px;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            background: #d50000;
+        }
+
+        /* Main Container */
+        #container {
+            text-align: center;
+            padding: 120px 20px 50px; /* Adjust padding to account for fixed header */
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            margin-bottom: 20px;
+            color: #000000;
+        }
+
+        p {
+            font-size: 1.2em;
+            line-height: 1.8;
+            max-width: 800px;
+            margin: 0 auto;
+            color: #333;
+        }
+
+        /* Contact Details */
+        .contact-details {
+            font-size: 1.2em;
+            margin-top: 20px;
+        }
+
+        .contact-details a {
+            color: #d50000;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        .contact-details a:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+        	<a href="/index">About</a>
+            <a href="/portfolio">Portfolio</a>
+            <a href="/animations">Animations</a>
+            <a href="/gallery">Gallery</a>
+            <a href="/contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div id="container">
+        <h1>Contact</h1>
+        <p>Feel free to reach out for inquiries, collaborations, or just to say hello!</p>
+        <div class="contact-details">
+            <p>Email: <a href="mailto:example@email.com">example@email.com</a></p>
+            <p>Phone: <a href="tel:+14444444444">+1 444 444 4444</a></p>
+        </div>
+    </div>
+</body>
+</html>
