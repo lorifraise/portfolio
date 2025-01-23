@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Artwork 1</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            color: #000000;
+            display: flex;
+            flex-direction: column;
+        }
+
+        /* Back Button */
+        .back-button {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            text-decoration: none;
+            font-size: 1.2em;
+            color: #d50000;
+            font-weight: bold;
+            border: 2px solid #d50000;
+            padding: 5px 15px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        .back-button:hover {
+            background: #d50000;
+            color: #ffffff;
+        }
+
+        /* Container */
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+            gap: 40px;
+        }
+
+        /* Image Section */
+        .image-section {
+            flex: 1;
+            text-align: center;
+        }
+
+        .image-section img {
+            width: 100%;
+            max-width: 500px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Details Section */
+        .details-section {
+            flex: 1;
+            text-align: left;
+        }
+
+        .details-section h1 {
+            font-size: 2.5em;
+            color: #d50000;
+            margin: 0 0 10px;
+            text-align: left;
+        }
+
+        .details-section p {
+            font-size: 1.2em;
+            line-height: 1.6;
+            color: #333;
+            margin: 10px 0;
+            text-align: left;
+        }
+
+        .details-section .additional-info {
+            margin-top: 20px;
+            font-size: 1em;
+            color: #555;
+            text-align: left;
+        }
+
+        .details-section .action-buttons {
+            margin-top: 20px;
+            display: flex;
+            justify-content: left;
+            gap: 20px;
+        }
+
+        .action-buttons a {
+            text-decoration: none;
+            font-size: 1em;
+            font-weight: bold;
+            color: #ffffff;
+            background: #d50000;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .action-buttons a:hover {
+            background: #a10000;
+        }
+    </style>
+</head>
+<body>
+
+    <a href="gallery" class="back-button">← Back</a>
+
+    <!-- Display Section -->
+    <div class="container">
+        <!-- Image Section -->
+        <div class="image-section">
+            <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/venus-de-milo-statue-G9GvRkF-600.jpg">
+        </div>
+
+        <!-- Details Section -->
+        <div class="details-section">
+            <h1>Venus de Milo</h1>
+            <p>
+                This is a detailed description of the artwork. It provides information about the inspiration, techniques used, and the story behind the piece. 
+            </p>
+
+            <!-- Additional Info -->
+            <div class="additional-info">
+                <p><strong>Dimensions:</strong> 206cm x 67cm x 61cm</p>
+                <p><strong>Medium:</strong> Marble statue</p>
+                <p><strong>Year:</strong> 2024</p>
+            </div>
+
+            <!-- Action Buttons -->
+            <div class="action-buttons">
+                <a href="contact">I like it!</a>
+        </div>
+    </div>
+
+</body>
+</html>
