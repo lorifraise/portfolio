@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | Lori Martin-Lim</title>
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Arial', sans-serif;
+            background: #ffffff;
+            color: #000000;
+        }
+
+        /* Header Navigation */
+        header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(255, 255, 255, 0.95);
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+            padding: 15px 20px;
+            z-index: 1000;
+        }
+
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 25px;
+        }
+
+        nav a {
+            text-decoration: none;
+            font-size: 1.2em;
+            font-weight: bold;
+            color: #333;
+            padding: 8px 12px;
+            border-radius: 5px;
+            transition: all 0.3s ease;
+        }
+
+        nav a:hover {
+            color: #ffffff;
+            background: #d50000;
+        }
+
+        /* Main Content */
+        #container {
+            margin-top: 100px;
+            padding: 20px;
+            max-width: 1200px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        h1 {
+            font-size: 3.5em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: -10px;
+        }
+        
+        h2 {
+            font-size: 1.5em;
+            font-weight: bold;
+            text-align: center;
+            margin-bottom: 50px;
+            color: #8c8c8c;
+        }
+
+        /* Gallery Grid */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .artwork {
+            text-align: center;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            padding: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .artwork:hover {
+            transform: scale(1.05);
+            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+        }
+
+        .artwork img {
+            max-width: 100%;
+            border-radius: 8px;
+        }
+
+        .artwork h2 {
+            font-size: 1.5em;
+            margin: 10px 0;
+            color: #d50000;
+        }
+
+        .artwork p {
+            font-size: 1em;
+            color: #333;
+        }
+
+        .artwork a {
+            text-decoration: none;
+            font-weight: bold;
+            color: #d50000;
+            transition: color 0.3s ease;
+        }
+
+        .artwork a:hover {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <!-- Header Navigation -->
+    <header>
+        <nav>
+            <a href="index">About</a>
+            <a href="portfolio">Portfolio</a>
+            <a href="animations">Animations</a>
+            <a href="gallery">Gallery</a>
+            <a href="contact">Contact</a>
+        </nav>
+    </header>
+
+    <!-- Main Content -->
+    <div id="container">
+        <h1>Gallery</h1>
+        <h2>Click any work for more info!</h2>
+        <div class="gallery">
+            <!-- Artwork 1 -->
+            <div class="artwork">
+                <a href="artwork1.html">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/ec/Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg/270px-Mona_Lisa%2C_by_Leonardo_da_Vinci%2C_from_C2RMF_retouched.jpg" alt="Artwork 1">
+                    <h2>Mona Lisa</h2>
+                    <p>Description</p>
+                </a>
+            </div>
+
+            <!-- Artwork 2 -->
+            <div class="artwork">
+                <a href="artwork2.html">
+                    <img src="https://atlas-content-cdn.pixelsquid.com/stock-images/venus-de-milo-statue-G9GvRkF-600.jpg" alt="Artwork 2">
+                    <h2>Statue I carved</h2>
+                    <p>Description</p>
+                </a>
+            </div>
+
+            <!-- Artwork 3 -->
+            <div class="artwork">
+                <a href="artwork3.html">
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSu0f5-Xr1dybHiP0hY8gjGS92rYGa4Ix88ZA&s" alt="Artwork 3">
+                    <h2>me</h2>
+                    <p>Description</p>
+                </a>
+            </div>
+
+            <!-- More artworks can be added below -->
+        </div>
+    </div>
+</body>
+</html>
